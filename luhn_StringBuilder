@@ -1,6 +1,7 @@
         static void Main(string[] args)
         {
             int position = 1;
+            int iD1, iD2;
             char cD1;
             string sD1;
             
@@ -18,6 +19,13 @@
             } while (cD1 != 13);
 
             Console.WriteLine($"Output: {sbD1}");
+
+            // Conver string to integer to luhn manipluation
+
+            iD1 = int.Parse(sbD1.ToString());
+            iD2 = iD1 + 1;
+
+            Console.WriteLine($"Output: {iD2}");
             Console.WriteLine("Enter is Pressed");
            
         }//Main
