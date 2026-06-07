@@ -1,0 +1,62 @@
+using System;
+using System.Reflection;
+using System.Text;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        public static int doubleDigitValue(int digit)
+        {
+            int doubledDigit = digit * 2;
+            int sum;
+            if (doubledDigit >= 10)
+            {
+                sum = 1 + doubledDigit % 10;
+            }
+            else
+            {
+                sum = doubledDigit;
+            }
+            return sum;
+        }
+
+        static void Main(string[] args)
+        {
+            int position = 1;
+            int iD1,checksum = 0;
+            char cD1 = '\0';  // assign a null character
+            string sD1;
+            
+            StringBuilder sbD1 = new StringBuilder();
+
+            Console.WriteLine("Enter a 6 dgit");
+
+            while (cD1 != '\r') // Enter in windows is /r
+            {
+
+                cD1 = Console.ReadKey().KeyChar;
+
+                if (cD1 == '\r') break;
+
+                if (position % 2 == 0) { checksum += cD1 - '0'; }
+                else                   { checksum += doubleDigitValue(cD1 - '0'); }      
+
+                sbD1.Append(cD1);
+
+                position++;
+                
+            }
+
+            Console.WriteLine($"checksum   : {checksum}");
+            Console.WriteLine($"Keyed Digit: {sbD1}");
+            
+
+            iD1 = int.Parse(sbD1.ToString());
+
+            Console.WriteLine($"Output(int): {iD1}");
+            Console.WriteLine("Enter is Pressed");
+           
+        }//Main
+    }
+}
