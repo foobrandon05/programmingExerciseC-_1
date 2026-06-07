@@ -1,0 +1,23 @@
+        static void Main(string[] args)
+        {
+            int position = 1;
+            char cD1;
+            string sD1;
+            
+            StringBuilder sbD1 = new StringBuilder();
+
+            Console.WriteLine("Enter a 6 dgit");
+
+            do
+            {
+                cD1 = Console.ReadKey().KeyChar;
+                Console.WriteLine($"\nposition: {position} enter digit: {cD1}");
+                sbD1.Append(cD1);
+                position++;
+          
+            } while (cD1 != 13);
+
+            Console.WriteLine($"Output: {sbD1}");
+            Console.WriteLine("Enter is Pressed");
+           
+        }//Main
