@@ -1,0 +1,46 @@
+using System;
+using System.Reflection;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        public static int doubleDigitValue(int digit)
+        {
+            int doubledDigit = digit * 2;
+            int sum;
+            if (doubledDigit >= 10)
+            {
+                sum = 1 + doubledDigit % 10;
+            }
+            else
+            {
+                sum = doubledDigit;
+            }
+            return sum;
+        }
+
+        static void Main(string[] args)
+        {
+            int position = 1;
+            int key;
+            char cD1;
+            string sD1;
+      
+            Console.WriteLine("Enter a 6 dgit");
+
+            ConsoleKeyInfo keyInfo = Console.ReadKey();
+            key = (int)keyInfo.KeyChar;  // key = 13 is enter
+
+            cD1 = Console.ReadKey().KeyChar; // cD1 ==13 is enter
+            
+            while (cD1 != 13 ){
+          
+                cD1 = Console.ReadKey().KeyChar;
+                position++;
+            }
+
+           
+        }//Main
+    }
+}
