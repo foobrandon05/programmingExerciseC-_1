@@ -1,0 +1,21 @@
+        static void Main(string[] args)
+        {
+            int position = 1;
+            int key;
+            char cD1;
+            string sD1;
+      
+            Console.WriteLine("Enter a 6 dgit");
+
+            //cD1 = Console.ReadKey().KeyChar; // cD1 ==13 is enter
+
+            do
+            {
+                cD1 = Console.ReadKey().KeyChar;
+                Console.WriteLine($"\nposition: {position} enter digit: {cD1}");
+                position++;
+            } while (cD1 != 13);
+
+            Console.WriteLine("Enter is Pressed");
+           
+        }//Main
