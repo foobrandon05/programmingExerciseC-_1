@@ -1,0 +1,23 @@
+using System;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int key1;
+
+            Console.WriteLine("Start small. Ship something.");
+
+            ConsoleKeyInfo keyInfo = Console.ReadKey();
+            key1 = (int)keyInfo.KeyChar;
+
+            if (key1 ==  13 ) { Console.WriteLine("You pressed Enter!");}
+            else              { Console.WriteLine("None"); }
+
+           
+
+        }
+    }
+}
